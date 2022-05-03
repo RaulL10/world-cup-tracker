@@ -42,6 +42,6 @@ export async function login(credentials) {
 }
 
 export function checkToken() {
-    return usersAPI.API.checkToken()
+    return usersAPI.checkToken()
     .then(dateStr => new Date(dateStr))
 }
