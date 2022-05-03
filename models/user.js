@@ -36,6 +36,6 @@ userSchema.pre('save', async function(next) {
     // update the password with the computed hash
     this.password = await bcrypt.hash(this.password, SALT_ROUNDS);
     return next();
-  });
+});
 
 module.exports = mongoose.model('User', userSchema);
