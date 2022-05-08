@@ -1,6 +1,6 @@
 import './App.css'
 import {useState} from 'react'
-import NewOrderPage from '../NewOrderPage/NewOrderPage'
+import Groups from '../Groups/Groups'
 import AuthPage from '../AuthPage/AuthPage'
 import OrderHistoryPage from '../OrderHistoryPage/OrderHistoryPage';
 import { Routes, Route } from 'react-router-dom'
@@ -17,7 +17,7 @@ export default function App() {
                 <>
                 <NavBar user={user} setUser={setUser}/>
                 <Routes>
-                    <Route path="/orders/new" element={<NewOrderPage />} />
+                    <Route path="/groups" element={<Groups />} />
                     <Route path="/orders" element={<OrderHistoryPage />} />
                 </Routes>
                 </>

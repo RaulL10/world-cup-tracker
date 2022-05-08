@@ -1,0 +1,31 @@
+.form-container {
+    height: 30vh;
+    width: 40%;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin: 0 auto;
+    font-size: 20px;
+}
+input {
+    font-size: 30px;
+    border-radius: 10px;
+    text-align: center;
+    margin-top: 10px;
+}
+label {
+    color: rgb(120, 16, 38);
+    margin-top: 5px;
+}
+button {
+    max-width: 100px;
+    margin: 0 auto;
+    margin-top: 5px;
+}
+h3 {
+    color: rgb(120, 16, 38);
+}

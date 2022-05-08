@@ -1,6 +1,8 @@
 import LoginForm from "../../components/LoginForm/LoginForm"
 import SignUpForm  from "../../components/SignUpForm/SignUpForm"
 import {useState} from 'react'
+import './AuthPage.css'
+
 
 export default function AuthPage({setUser}) {
     const [currentForm, setCurrentForm] = useState('login')
@@ -14,21 +16,24 @@ export default function AuthPage({setUser}) {
     }
     return (
         <main>
-            <h1>Auth Page</h1>
-            <h3 onClick={handleClick}> 
+            <div className="banner">
+                <h1>COPA MUNDIAL <br></br>2022</h1>
+            </div>
                 {
                     currentForm === 'login' ?
-                    "Sign Up"
+                    
+                    <LoginForm setUser={setUser} />
                     :
-                    "Log In"
+                    <SignUpForm setUser={setUser} />
                 }
-            </h3>
-            {
-                currentForm === 'login' ?
-                <LoginForm setUser={setUser} />
-                :
-                <SignUpForm setUser={setUser} />
-            }
+                <button onClick={handleClick}> 
+                    {
+                        currentForm === 'login' ?
+                        "Sign Up"
+                        :
+                        "Log In"
+                    }
+                </button>
         </main>
     )
 }
