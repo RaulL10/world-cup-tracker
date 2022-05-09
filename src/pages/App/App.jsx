@@ -20,6 +20,7 @@ export default function App() {
                     <Route path="/groups" element={<Groups />} />
                     <Route path="/orders" element={<OrderHistoryPage />} />
                 </Routes>
+                <Groups />
                 </>
                 :
 
