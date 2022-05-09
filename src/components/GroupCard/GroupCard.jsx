@@ -1,5 +1,7 @@
 // import { Link } from "react-router-dom";
 import TeamCard from "../TeamCard/TeamCard";
+import './GroupCard.css'
+
 
 export default function GroupCard({group}) {
 

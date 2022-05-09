@@ -44,11 +44,11 @@ export default function Groups() {
         <h1> QATAR 2022 </h1>
         <h2>Groups</h2>
         <hr></hr>
-        <ul>
+        <div className='groups'>
             {data.data.groups.data.map((group, idx) => (
                 <GroupCard group={group} />
             ))}
-        </ul>
+        </div>
         </>
     )
 }
