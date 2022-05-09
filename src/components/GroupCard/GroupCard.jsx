@@ -7,7 +7,7 @@ export default function GroupCard({group}) {
 
   return (
     <>
-        <div>
+        <div className="groupCard">
             <h3>{group.name}</h3>
             <ul>
                 {group.standings.data.map((team, idx) => (
@@ -15,7 +15,6 @@ export default function GroupCard({group}) {
                 ))}
             </ul>
         </div>
-
     </>
   );
 }

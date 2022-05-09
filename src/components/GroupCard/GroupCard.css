@@ -2,6 +2,18 @@ ul {
     display: flex;
     flex-direction: column;
     padding: 0;
-    height: 300px;
-    width: 250px;
+    height: 150px;
+    width: 300px;
+    font-size: 19px;
+}
+h3 {
+    font-size: 27px;
+}
+.groupCard {
+    border-style: solid;
+    border-color: rgb(120, 16, 38);
+    border-radius: 10px;
+    margin-bottom: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+
 }
