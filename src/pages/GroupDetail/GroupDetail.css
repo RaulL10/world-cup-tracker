@@ -1,9 +1,23 @@
+.groupDetailsPage {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas:
+    'sec1 sec2';
+}
+.sectionTwo {
+    grid-area: sec2;
+}
 h1 {
     font-family: 'Macondo', cursive;
     font-size: 35px;
 }
 .matches {
-    max-width: 50%;
+    grid-area: sec1;
+    max-width: 90%;
     height: 80%;
     margin-right: 0px;
+}
+h2 {
+    margin-top: 0px;
 }

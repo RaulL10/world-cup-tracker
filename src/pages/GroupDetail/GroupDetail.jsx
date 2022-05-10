@@ -3,6 +3,8 @@ import { useEffect } from "react"
 import { useState } from "react"
 import MatchCard from '../../components/MatchCard/MatchCard'
 import './GroupDetail.css'
+import MatchFacts from '../../components/MatchFacts/MatchFacts'
+
 
 export default function GroupDetail({data}) {
     let {groupName} = useParams()
@@ -41,13 +43,16 @@ export default function GroupDetail({data}) {
     return (
         <>
         <h1> {group.name} </h1>
-        
-        <div className="matches">
-            {match.data.fixtures.data.map((match) => (
-            <MatchCard match={match} data={data} />
-            ))}
+        <div className="groupDetailsPage">
+            <section className="matches">
+                {match.data.fixtures.data.map((match) => (
+                <MatchCard match={match} data={data} />
+                ))}
+            </section>
+            <section className="sectionTwo">
+                <MatchFacts />
+            </section>
         </div>
-
         </>
     )
 }
