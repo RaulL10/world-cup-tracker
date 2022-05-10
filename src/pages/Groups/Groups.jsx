@@ -9,10 +9,6 @@ export default function Groups() {
     const [loading, setLoading] = useState(true)
     const [error, setError] = useState(null)
 
-
-
-
-
     useEffect(() => {
             fetch("https://soccer.sportmonks.com/api/v2.0/seasons/18017?api_token=1iRPD7aLwSlDbNc6hOvzLS9iHa4HxbPxZavISDUpg5W6Pj8DnZxBGUsgaQQs&include=groups")
                 .then(response => {
@@ -46,7 +42,7 @@ export default function Groups() {
         <hr></hr>
         <div className='groups'>
             {data.data.groups.data.map((group, idx) => (
-                <GroupCard group={group} />
+                <GroupCard group={group} key={group.name} />
             ))}
         </div>
         </>

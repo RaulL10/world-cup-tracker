@@ -1,7 +1,7 @@
 import './TeamCard.css'
 
-export default function TeamCard({group,team}) {
 
+export default function TeamCard({team}) {
 
    
     return (
