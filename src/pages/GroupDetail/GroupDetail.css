@@ -2,3 +2,8 @@ h1 {
     font-family: 'Macondo', cursive;
     font-size: 35px;
 }
+.matches {
+    max-width: 50%;
+    height: 80%;
+    margin-right: 0px;
+}

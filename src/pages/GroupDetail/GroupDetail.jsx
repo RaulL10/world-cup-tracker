@@ -2,6 +2,7 @@ import { useParams } from "react-router-dom"
 import { useEffect } from "react"
 import { useState } from "react"
 import MatchCard from '../../components/MatchCard/MatchCard'
+import './GroupDetail.css'
 
 export default function GroupDetail({data}) {
     let {groupName} = useParams()
@@ -12,7 +13,7 @@ export default function GroupDetail({data}) {
     const [error, setError] = useState(null)
 
     useEffect(() => {
-            fetch("https://soccer.sportmonks.com/api/v2.0/stages/season/18017?api_token=1iRPD7aLwSlDbNc6hOvzLS9iHa4HxbPxZavISDUpg5W6Pj8DnZxBGUsgaQQs&include=fixtures")
+            fetch("https://soccer.sportmonks.com/api/v2.0/stages/77452386?api_token=1iRPD7aLwSlDbNc6hOvzLS9iHa4HxbPxZavISDUpg5W6Pj8DnZxBGUsgaQQs&include=fixtures.localTeam,fixtures.visitorTeam")
                 .then(response => {
                     if(response.ok) {
                         return response.json()
@@ -20,7 +21,7 @@ export default function GroupDetail({data}) {
                     throw response;
                 })
                 .then(match => {
-                    console.log(match.data[5].fixtures.data)
+                    console.log(match.data.fixtures.data[2].group_id)
                     setMatch(match);
                 })
                 .catch(error => {
@@ -35,12 +36,15 @@ export default function GroupDetail({data}) {
             if (error) return "Error!"
 
 
+
+
     return (
         <>
         <h1> {group.name} </h1>
-        <div>
-            {match.data[5].fixtures.data.map((match) => (
-            <MatchCard match={match} />
+        
+        <div className="matches">
+            {match.data.fixtures.data.map((match) => (
+            <MatchCard match={match} data={data} />
             ))}
         </div>
 

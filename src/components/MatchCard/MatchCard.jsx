@@ -1,8 +1,20 @@
+import { useParams } from "react-router-dom"
+import './MatchCard.css'
 
-
-
-export default function MatchCard({match}) {
+export default function MatchCard({match, data}) {
+    let {groupName} = useParams()
+    let group = data.data.groups.data.find((group) => group.name === groupName)
     return (
-        <p>{match.localteam_id}</p>
+        <>
+        {
+            match.group_id === group.id ?
+            
+            <li>{match.localTeam.data.name} VS {match.visitorTeam.data.name}</li>
+            :
+            <p></p>
+        }
+            
+        
+            </>
     )
 }
