@@ -9,16 +9,16 @@ export default function GroupCard({group, key}) {
   
   return (
     <>
-    {/* <Link to={`/groups/${group.name}`}> */}
+    <Link to={`/${group.name}`}>
         <div className="groupCard">
             <h3>{group.name}</h3>
             <ul>
                 {group.standings.data.map((team, idx) => (
-                    <TeamCard group={group} team={team} key={group.name} />
+                    <TeamCard group={group} team={team} />
                 ))}
             </ul>
         </div>
-    {/* </Link> */}
+    </Link>
     </>
   );
 }

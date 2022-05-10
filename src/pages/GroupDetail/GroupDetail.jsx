@@ -1,10 +1,10 @@
 // import {checkToken}  from '../../utilities/users-service'
 import { useParams } from "react-router-dom"
 
-export default function GroupDetail({groups}) {
+export default function GroupDetail({data}) {
     let {groupName} = useParams()
-    let group = groups.find((group) => group.name === groupName)
-    // console.log('here')
+    let group = data.data.groups.data.find((group) => group.name === groupName)
+    
     // async function handleCheckToken(){
     //     const expDate = await checkToken()
     //     console.log(expDate)
