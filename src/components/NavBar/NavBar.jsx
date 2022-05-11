@@ -14,11 +14,11 @@ export default function NavBar({user, setUser}) {
         <nav>
             {/* <Link to="/detail">Order History</Link> */}
             {/* &nbsp; | &nbsp; */}
-            <Link to="/">Groups</Link>
+            <span className="welcome"> Welcome, {user.name} </span>
+            <Link to="" className="link" onClick={handleLogOut}>Log Out</Link>
             &nbsp;&nbsp;&nbsp;
-            <span> Welcome, {user.name} </span>
             &nbsp;&nbsp;
-            <Link to="" onClick={handleLogOut}>Log Out</Link>
+            <Link to="/" className="link">Groups</Link>
         </nav>
     )
 }
