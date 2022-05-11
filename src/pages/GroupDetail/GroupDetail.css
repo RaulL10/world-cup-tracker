@@ -1,12 +1,14 @@
 .groupDetailsPage {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr;
+    grid-template-rows: 1fr 1fr;
     grid-template-areas:
-    'sec1 sec2';
+    'sec1 sec2'
+    'sec1 aside';
 }
 .sectionTwo {
     grid-area: sec2;
+    height: 60%;
 }
 h1 {
     font-family: 'Macondo', cursive;
@@ -15,9 +17,13 @@ h1 {
 .matches {
     grid-area: sec1;
     max-width: 90%;
-    height: 80%;
+    height: 90%;
     margin-right: 0px;
 }
 h2 {
     margin-top: 0px;
+}
+.sectionThree {
+    grid-area: aside;
+    margin-top: 20px;
 }

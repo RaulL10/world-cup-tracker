@@ -5,6 +5,8 @@ import MatchCard from '../../components/MatchCard/MatchCard'
 import './GroupDetail.css'
 import MatchFacts from '../../components/MatchFacts/MatchFacts'
 import {Link} from 'react-router-dom'
+import Predictions from "../../components/Predictions/Predictions"
+
 
 export default function GroupDetail({data}) {
     let {groupName} = useParams()
@@ -16,7 +18,7 @@ export default function GroupDetail({data}) {
     const [facts, setFacts] = useState(null)
 
     useEffect(() => {
-            fetch("https://soccer.sportmonks.com/api/v2.0/stages/77452386?api_token=1iRPD7aLwSlDbNc6hOvzLS9iHa4HxbPxZavISDUpg5W6Pj8DnZxBGUsgaQQs&include=fixtures.localTeam,fixtures.visitorTeam")
+            fetch("https://soccer.sportmonks.com/api/v2.0/stages/77452386?api_token=1iRPD7aLwSlDbNc6hOvzLS9iHa4HxbPxZavISDUpg5W6Pj8DnZxBGUsgaQQs&include=fixtures.localTeam,fixtures.visitorTeam,fixtures.venue")
                 .then(response => {
                     if(response.ok) {
                         return response.json()
@@ -52,6 +54,9 @@ export default function GroupDetail({data}) {
             </section>
             <section className="sectionTwo">
                 <MatchFacts facts={facts} />
+            </section>
+            <section className="sectionThree">
+                <Predictions />
             </section>
         </div>
         </>
