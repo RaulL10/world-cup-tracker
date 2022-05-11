@@ -2,6 +2,6 @@
 
 export default function Predictions() {
     return (
-        <h1> Predictions </h1>
+        <h1>Predictions</h1>
     )
 }

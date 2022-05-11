@@ -11,7 +11,7 @@ export default function MatchCard({match, data, setFacts}) {
         {
             match.group_id === group.id ?
 
-            <li className="listmatch">{match.localTeam.data.name}&nbsp;<img src={match.localTeam.data.logo_path} width="25px" /> &nbsp; VS &nbsp; {match.visitorTeam.data.name}&nbsp;<img src={match.visitorTeam.data.logo_path} width="25px" /></li>
+            <li className="listmatch">{match.localTeam.data.name}&nbsp;<img src={match.localTeam.data.logo_path} width="25px" alt="" /> &nbsp; VS &nbsp; {match.visitorTeam.data.name}&nbsp;<img src={match.visitorTeam.data.logo_path} width="25px" alt="" /></li>
             :
             <p></p>
         }

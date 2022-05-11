@@ -2,10 +2,9 @@ import { useParams } from "react-router-dom"
 import { useEffect } from "react"
 import { useState } from "react"
 import MatchCard from '../../components/MatchCard/MatchCard'
-import './GroupDetail.css'
 import MatchFacts from '../../components/MatchFacts/MatchFacts'
-import {Link} from 'react-router-dom'
 import Predictions from "../../components/Predictions/Predictions"
+import './GroupDetail.css'
 
 
 export default function GroupDetail({data}) {
@@ -40,9 +39,6 @@ export default function GroupDetail({data}) {
             if (loading) return "Loading.."
             if (error) return "Error!"
 
-
-
-
     return (
         <>
         <h1> {group.name} </h1>
@@ -53,7 +49,7 @@ export default function GroupDetail({data}) {
                 ))}
             </section>
             <section className="sectionTwo">
-                <MatchFacts facts={facts} />
+                <MatchFacts facts={facts} data={data} />
             </section>
             <section className="sectionThree">
                 <Predictions />

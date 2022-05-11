@@ -1,5 +1,6 @@
 .groupDetailsPage {
     display: grid;
+    height: 80vh;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     grid-template-areas:
@@ -8,7 +9,10 @@
 }
 .sectionTwo {
     grid-area: sec2;
-    height: 60%;
+    height: 100%;
+    background-color: rgb(120, 16, 38);
+    border-radius: 8px;
+    color: white;
 }
 h1 {
     font-family: 'Macondo', cursive;
@@ -22,8 +26,4 @@ h1 {
 }
 h2 {
     margin-top: 0px;
-}
-.sectionThree {
-    grid-area: aside;
-    margin-top: 20px;
 }
