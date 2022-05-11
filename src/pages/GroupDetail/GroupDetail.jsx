@@ -4,7 +4,7 @@ import { useState } from "react"
 import MatchCard from '../../components/MatchCard/MatchCard'
 import './GroupDetail.css'
 import MatchFacts from '../../components/MatchFacts/MatchFacts'
-
+import {Link} from 'react-router-dom'
 
 export default function GroupDetail({data}) {
     let {groupName} = useParams()
@@ -13,6 +13,7 @@ export default function GroupDetail({data}) {
     const [match, setMatch] = useState(null)
     const [loading, setLoading] = useState(true)
     const [error, setError] = useState(null)
+    const [facts, setFacts] = useState(null)
 
     useEffect(() => {
             fetch("https://soccer.sportmonks.com/api/v2.0/stages/77452386?api_token=1iRPD7aLwSlDbNc6hOvzLS9iHa4HxbPxZavISDUpg5W6Pj8DnZxBGUsgaQQs&include=fixtures.localTeam,fixtures.visitorTeam")
@@ -23,7 +24,7 @@ export default function GroupDetail({data}) {
                     throw response;
                 })
                 .then(match => {
-                    console.log(match.data.fixtures.data[2].group_id)
+                    console.log(match)
                     setMatch(match);
                 })
                 .catch(error => {
@@ -46,11 +47,11 @@ export default function GroupDetail({data}) {
         <div className="groupDetailsPage">
             <section className="matches">
                 {match.data.fixtures.data.map((match) => (
-                <MatchCard match={match} data={data} />
+                <MatchCard match={match} data={data} setFacts={setFacts} />
                 ))}
             </section>
             <section className="sectionTwo">
-                <MatchFacts />
+                <MatchFacts facts={facts} />
             </section>
         </div>
         </>
