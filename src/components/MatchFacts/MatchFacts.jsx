@@ -1,4 +1,5 @@
 export default function MatchFacts({facts}) {
+    console.log(facts.time.starting_at.date_time)
     return (
         <>
         <h2> Match Stats </h2>
