@@ -49,10 +49,10 @@ export default function GroupDetail({data}) {
                 ))}
             </section>
             <section className="sectionTwo">
-                <MatchFacts facts={facts} data={data} />
+                <MatchFacts facts={facts} />
             </section>
             <section className="sectionThree">
-                <Predictions />
+                <Predictions facts={facts} />
             </section>
         </div>
         </>

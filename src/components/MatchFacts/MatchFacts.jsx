@@ -1,7 +1,7 @@
 import './MatchFacts.css'
 
 
-export default function MatchFacts({facts, data}) {
+export default function MatchFacts({facts}) {
     console.log(facts)
     return (
         <>
