@@ -52,7 +52,7 @@ export default function GroupDetail({data, user}) {
                 <MatchFacts facts={facts} />
             </section>
             <section className="sectionThree">
-                <Predictions facts={facts} user={user} />
+                <Predictions facts={facts} user={user} group={group}/>
             </section>
         </div>
         </>

@@ -7,9 +7,6 @@ export default function Results({result, prediction, facts}) {
     return (
         <>
         <div>
-            {
-
-            }
             <li>{facts && facts.visitorTeam.data.name} {result.home} and {result.away}</li>
         </div>
         </>

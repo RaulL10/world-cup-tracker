@@ -3,7 +3,8 @@ import { useState, useEffect } from 'react'
 import * as predictionsAPI from '../../utilities/prediction-api'
 import Results from '../../components/Results/Results'
 
-export default function Predictions({facts, user}) {
+export default function Predictions({facts, user, group}) {
+    console.log(group)
     const [prediction, setPrediction] = useState([])
     const [error, setError] = useState('')
     const [form, setForm] = useState({
