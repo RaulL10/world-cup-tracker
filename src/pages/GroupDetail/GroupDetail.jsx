@@ -7,7 +7,7 @@ import Predictions from "../../components/Predictions/Predictions"
 import './GroupDetail.css'
 
 
-export default function GroupDetail({data}) {
+export default function GroupDetail({data, user}) {
     let {groupName} = useParams()
     let group = data.data.groups.data.find((group) => group.name === groupName)
     
@@ -52,7 +52,7 @@ export default function GroupDetail({data}) {
                 <MatchFacts facts={facts} />
             </section>
             <section className="sectionThree">
-                <Predictions facts={facts} />
+                <Predictions facts={facts} user={user} />
             </section>
         </div>
         </>

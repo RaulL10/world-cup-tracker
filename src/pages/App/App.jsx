@@ -50,7 +50,7 @@ export default function App() {
                 <NavBar user={user} setUser={setUser}/>
                 <Routes>
                     <Route path="/" element={<Groups data={data}/>} />
-                    <Route path="/:groupName" element={<GroupDetail data={data} />} />
+                    <Route path="/:groupName" element={<GroupDetail data={data} user={user} />} />
                 </Routes>
                 
                 </>
