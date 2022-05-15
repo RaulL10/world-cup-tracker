@@ -4,7 +4,6 @@ import * as predictionsAPI from '../../utilities/prediction-api'
 import Results from '../../components/Results/Results'
 
 export default function Predictions({facts, user, group}) {
-    // console.log(group)
     const userName = user.name
     console.log(userName)
     const [prediction, setPrediction] = useState([])
@@ -14,8 +13,8 @@ export default function Predictions({facts, user, group}) {
         away: 0,
         name: userName,
         group: group.id,
-        hometeam: facts && facts.localTeam.data.name,
-        awayteam: facts && facts.visitorTeam.data.name
+        hometeam: facts.localTeam.data.name,
+        awayteam: facts.visitorTeam.data.name,
     })
 
     async function getPredictions() {
@@ -37,8 +36,7 @@ export default function Predictions({facts, user, group}) {
             delete prediction.confirm
             predictionsAPI.submit(form)
             getPredictions()
-            setForm({home: 0, away: 0, name: userName, group: group.id, hometeam: facts && facts.localTeam.data.name, awayteam: facts && facts.visitorTeam.data.name
-            })
+            setForm({home: 0, away: 0, name: userName, group: group.id, hometeam: facts && facts.localTeam.data.name, awayteam: facts && facts.visitorTeam.data.name})
         } catch {
             setError('Submit Failed')
         }
@@ -47,13 +45,12 @@ export default function Predictions({facts, user, group}) {
         getPredictions()
     }, [] ) 
 
-    console.log(prediction)
     return (
-        <div className='predictions'>
-        <h1 className="">Predictions</h1>
+        <div className='predictions'> 
+        <h2 className="">Predictions</h2>
         <form onSubmit={handleSubmit} className="pform">
-            <label>Home team:</label>
-            <input type='text' name='hometeam' value={facts && facts.localTeam.data.name} hidden/>
+            {/* <label>Home team:{facts && facts.localTeam.data.name}</label> */}
+            <input type='text' name='hometeam' value={facts && facts.localTeam.data.name} onChange={handleChange} readOnly/>
             <select className="select" name='home' value={form.home} onChange={handleChange}>
                 <option>0</option>
                 <option>1</option>
@@ -65,8 +62,8 @@ export default function Predictions({facts, user, group}) {
                 <option>7</option>
                 <option>8</option>
             </select>
-            <label>Away Team</label>
-            <input type='text' name='awayteam' value={facts && facts.visitorTeam.data.name} hidden/>
+            {/* <label>Away Team</label> */}
+            <input type='text' name='awayteam' value={facts && facts.visitorTeam.data.name} onChange={handleChange} readOnly/>
             <select className="select" name='away' value={form.away} onChange={handleChange}>
                 <option>0</option>
                 <option>1</option>
@@ -82,7 +79,7 @@ export default function Predictions({facts, user, group}) {
             <input type="number" name="group" value={group.id} hidden/>
             <button type="submit">Submit</button>
         </form>
-        <hr></hr>
+        <hr className='predictionHr'></hr>
         <p>{error}</p>
 
             {prediction.map((result) => (             

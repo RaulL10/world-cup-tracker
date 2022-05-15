@@ -11,7 +11,7 @@ export default function Results({result, facts, f}) {
         <>
             {
                 f === result.group ?
-                <li>{result.name} {result.hometeam} {result.home} and {result.away} {result.awayteam}</li>
+                <p>{result.name} {result.hometeam} {result.home} and {result.away} {result.awayteam}</p>
                 :
                 <p></p>
             }

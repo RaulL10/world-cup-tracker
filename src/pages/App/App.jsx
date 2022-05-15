@@ -26,7 +26,6 @@ export default function App() {
                 })
                 .then(data => {
                     console.log(data)
-                    console.log(data.data.groups.data[0])
                     setData(data);
                 })
                 .catch(error => {
