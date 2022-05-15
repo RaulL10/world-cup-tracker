@@ -8,6 +8,7 @@ module.exports = {
 async function create(req, res) {
     try {
         const prediction = await Prediction.create(req.body)
+        console.log(req.body)
         res.json(prediction)
     } catch (err) {
         // client will chek for any non 200 code

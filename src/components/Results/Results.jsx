@@ -1,14 +1,20 @@
+import { useEffect } from "react"
 
+export default function Results({result, facts, f}) {
+    
 
-export default function Results({result, prediction, facts}) {
-    console.log(result.group)
-    console.log(prediction)
-    console.log(facts && facts.group_id)
+    useEffect(() => {
+        console.log()
+    }, [] ) 
+
     return (
         <>
-        <div>
-            <li>{facts && facts.visitorTeam.data.name} {result.home} and {result.away}</li>
-        </div>
+            {
+                f === result.group ?
+                <li>{result.name} {result.hometeam} {result.home} and {result.away} {result.awayteam}</li>
+                :
+                <p></p>
+            }
         </>
     )
 }

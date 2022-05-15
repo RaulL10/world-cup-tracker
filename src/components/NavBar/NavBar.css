@@ -3,6 +3,7 @@ nav {
     background-color: rgb(120, 16, 38);
     color: white;
     border-radius: 6px;
+    margin-top: 10px;
 }
 a {
     color: black;

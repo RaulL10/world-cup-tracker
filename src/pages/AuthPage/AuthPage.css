@@ -13,3 +13,12 @@
 body {
     margin-top: 0px;
 }
+.switch {
+    float: right;
+    background-color: rgb(120, 16, 38);
+    padding: 5px 10px 5px 10px;
+    border-radius: 8px;
+    color: white;
+    font-family: 'Macondo', cursive;
+    font-size: 18px;
+}

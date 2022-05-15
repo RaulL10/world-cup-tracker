@@ -26,7 +26,7 @@ export default function AuthPage({setUser}) {
                     :
                     <SignUpForm setUser={setUser} />
                 }
-                <button onClick={handleClick}> 
+                <button className="switch" onClick={handleClick}> 
                     {
                         currentForm === 'login' ?
                         "Sign Up"

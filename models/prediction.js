@@ -2,10 +2,12 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const Prediction =  new Schema({
-    name: {type: Schema.Types.ObjectId, ref: 'User'},
     home: {type: Number, required: true},
     away: {type: Number, required: true},
-    group: {type: Number}
+    name: {type: String},
+    group: {type: Number},
+    hometeam: {type: String},
+    awayteam: {type:String}
 }, {
     timestamps: true
 })

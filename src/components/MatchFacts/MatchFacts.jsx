@@ -2,7 +2,7 @@ import './MatchFacts.css'
 
 
 export default function MatchFacts({facts}) {
-    console.log(facts)
+    
     return (
         <>
         <h2> Match Stats </h2>
