@@ -1,5 +1,8 @@
-li {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 10px;
+.teamCard {
+    list-style: none;
+    margin-bottom: 8px;
+}
+.points {
+    float: right;
+    margin-right: 15px;
 }

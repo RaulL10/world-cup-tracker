@@ -4,10 +4,10 @@ ul {
     padding: 0;
     height: 150px;
     width: 300px;
-    font-size: 19px;
+    font-size: 20px;
 }
-h3 {
-    font-size: 27px;
+.groupname {
+    font-size: 25px;
 }
 .groupCard {
     border-style: solid;

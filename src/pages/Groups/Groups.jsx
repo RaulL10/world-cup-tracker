@@ -7,9 +7,8 @@ export default function Groups({data}) {
 
     return (
         <>
-        <h1> QATAR 2022 </h1>
-        <h2>Groups</h2>
-        <hr></hr>
+        <h1> GROUP STAGE <span>QATAR 2022 </span></h1>
+        <hr></hr><br></br>
         <div className='groups'>
             {data.data.groups.data.map((group) => (
             <GroupCard group={group} />

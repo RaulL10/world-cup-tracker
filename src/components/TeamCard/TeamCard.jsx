@@ -1,10 +1,9 @@
 import './TeamCard.css'
 
 
-export default function TeamCard({team}) {
-
+export default function TeamCard({team, group}) {
    
     return (
-       <li>{team.team_name}</li>
+            <li className="teamCard">{team.team_name} <span className='points'>{team.total.points}</span></li>
     )
 }
