@@ -9,4 +9,15 @@
     flex-direction: row;
     justify-content: center;
     cursor: pointer;
+    background-color: rgb(120, 16, 38);
+    color: white;
+    /* box-shadow: rgb(120, 16, 38) 4px 4px 0px; */
+    transition: transform 200ms, box-shadow 200ms;
+}
+.listmatch:active {
+    transform: translateY(4px) translateX(4px);
+    box-shadow: rgb(120, 16, 38) 0px 0px 0px;
+}
+.listmatch:hover {
+    transform: translateY(4px) translateX(4px);
 }

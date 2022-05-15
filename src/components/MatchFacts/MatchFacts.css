@@ -1,0 +1,14 @@
+.stats {
+    height: 225px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+.score {
+    color: white;
+}
+.teams {
+    font-size: 20px;
+}
+hr {
+    width: 50%;
+    margin: 0 auto;
+}

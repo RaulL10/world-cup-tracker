@@ -49,9 +49,9 @@ export default function Predictions({facts, user, group}) {
 
     console.log(prediction)
     return (
-        <>
+        <div className='predictions'>
         <h1 className="">Predictions</h1>
-        <form onSubmit={handleSubmit} >
+        <form onSubmit={handleSubmit} className="pform">
             <label>Home team:</label>
             <input type='text' name='hometeam' value={facts && facts.localTeam.data.name} hidden/>
             <select className="select" name='home' value={form.home} onChange={handleChange}>
@@ -82,12 +82,13 @@ export default function Predictions({facts, user, group}) {
             <input type="number" name="group" value={group.id} hidden/>
             <button type="submit">Submit</button>
         </form>
+        <hr></hr>
         <p>{error}</p>
 
             {prediction.map((result) => (             
                 <Results result={result} f={facts && facts.group_id} facts={facts} />
             ))}
        
-        </>
+        </div>
     )
 }

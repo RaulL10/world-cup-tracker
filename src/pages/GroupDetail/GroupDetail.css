@@ -9,10 +9,14 @@
 }
 .sectionTwo {
     grid-area: sec2;
-    height: 100%;
     background-color: rgb(120, 16, 38);
     border-radius: 8px;
     color: white;
+    height: 225px;
+    width: 80%;
+    margin: 0 auto;
+    transform: translateY(4px) translateX(4px);
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 }
 h1 {
     font-family: 'Macondo', cursive;
@@ -20,9 +24,9 @@ h1 {
 }
 .matches {
     grid-area: sec1;
-    max-width: 90%;
+    width: 80%;
     height: 90%;
-    margin-right: 0px;
+    margin: 0 auto;
 }
 h2 {
     margin-top: 0px;

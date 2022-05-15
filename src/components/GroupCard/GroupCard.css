@@ -22,6 +22,9 @@ ul {
     transform: translateY(4px) translateX(4px);
     box-shadow: rgb(120, 16, 38) 0px 0px 0px;
 }
+.groupCard:hover {
+    transform: translateY(4px) translateX(4px);
+}
 a {
     color: black;
 }
