@@ -33,12 +33,12 @@ export default function LoginForm({ setUser }) {
       <div className="form-container" onSubmit={handleSubmit}>
         <form autoComplete="off" >
           <label>Email</label>
-          <input type="text" name="email" value={credentials.email} onChange={handleChange} required />
+          <input type="text" name="email" value={credentials.email} onChange={handleChange} className="auth" required />
           <label>Password</label>
-          <input type="password" name="password" value={credentials.password} onChange={handleChange} required />
+          <input type="password" name="password" value={credentials.password} onChange={handleChange} className="auth" required />
           <button type="submit">LOG IN</button>
         </form>
-        <hr></hr>
+        <hr className='authHr'></hr>
           <h3> If you do not have an account please Sign Up.</h3>
       </div>
       <p className="error-message">&nbsp;{error}</p>

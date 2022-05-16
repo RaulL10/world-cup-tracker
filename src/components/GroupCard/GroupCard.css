@@ -8,19 +8,22 @@ ul {
 }
 .groupname {
     font-size: 25px;
+    color: white;
 }
 .groupCard {
+    color: white;
     border-style: solid;
+    background-color: rgb(120, 16, 38);
     border-color: rgb(120, 16, 38);
     border-radius: 10px;
     margin-bottom: 10px;
     /* box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); */
-    box-shadow: rgb(120, 16, 38) 4px 4px 0px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transition: transform 200ms, box-shadow 200ms;
 }
 .groupCard:active {
     transform: translateY(4px) translateX(4px);
-    box-shadow: rgb(120, 16, 38) 0px 0px 0px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 }
 .groupCard:hover {
     transform: translateY(4px) translateX(4px);

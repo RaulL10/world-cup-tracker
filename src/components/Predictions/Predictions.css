@@ -1,5 +1,5 @@
 .select {
-    max-width: 40px;
+    font-size: 15px;
 }
 h1 {
     margin-top: 0px;
@@ -11,6 +11,7 @@ h1 {
     color: white;
     margin: 0 auto;
     min-height: 100px;
+    opacity: 90%;
 }
 .pform {
     display: flex;
@@ -21,13 +22,19 @@ h1 {
     text-align: center;
     justify-content: space-around;
 }
-label {
+/* label {
     color: white;
-}
-button {
+} */
+.pbutton {
     max-width: none;
     margin: 0;
+    background-color: white;
+    color: black;
 }
 .predictionHr {
     margin-top: 8px;
+}
+.pinput {
+    border-style: none;
+    font-size: 18px;
 }

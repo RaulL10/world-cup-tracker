@@ -6,7 +6,7 @@ import GroupCard from '../../components/GroupCard/GroupCard'
 export default function Groups({data}) {
 
     return (
-        <>
+        <div className='body'>
         <h1> GROUP STAGE <span>QATAR 2022 </span></h1>
         <hr></hr><br></br>
         <div className='groups'>
@@ -14,6 +14,6 @@ export default function Groups({data}) {
             <GroupCard group={group} />
             ))}
         </div>
-        </>
+        </div>
     )
 }

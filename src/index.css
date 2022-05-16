@@ -1,3 +1,8 @@
 body {
   font-family: 'Comfortaa', cursive;
+  height: 120vh;
+  background-image: url(https://i.imgur.com/E5eXEO0.jpg);
+  background-size: cover;
+  background-attachment: fixed;
 }
+  

@@ -40,21 +40,21 @@ export default function GroupDetail({data, user}) {
             if (error) return "Error!"
 
     return (
-        <>
-        <h1> {group.name} </h1>
-        <div className="groupDetailsPage">
-            <section className="matches">
-                {match.data.fixtures.data.map((match) => (
-                <MatchCard match={match} data={data} setFacts={setFacts} />
-                ))}
-            </section>
-            <section className="sectionTwo">
-                <MatchFacts facts={facts} />
-            </section>
-            <section className="sectionThree">
-                <Predictions facts={facts} user={user} group={group} />
-            </section>
+        <div className="body">
+            <h1> {group.name} </h1>
+            <div className="groupDetailsPage">
+                <section className="matches">
+                    {match.data.fixtures.data.map((match) => (
+                    <MatchCard match={match} data={data} setFacts={setFacts} />
+                    ))}
+                </section>
+                <section className="sectionTwo">
+                    <MatchFacts facts={facts} />
+                </section>
+                <section className="sectionThree">
+                    <Predictions facts={facts} user={user} group={group} />
+                </section>
+            </div>
         </div>
-        </>
     )
 }

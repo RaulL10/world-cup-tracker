@@ -1,4 +1,6 @@
 import { useEffect } from "react"
+import './Results.css'
+
 
 export default function Results({result, facts, f}) {
     
@@ -11,7 +13,7 @@ export default function Results({result, facts, f}) {
         <>
             {
                 f === result.group ?
-                <p>{result.name} {result.hometeam} {result.home} and {result.away} {result.awayteam}</p>
+                <p className="usersP"><span className="user">User: {result.name}</span> {result.hometeam} {result.home} | {result.away} {result.awayteam}</p>
                 :
                 <p></p>
             }

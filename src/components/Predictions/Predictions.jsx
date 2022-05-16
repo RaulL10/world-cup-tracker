@@ -13,8 +13,8 @@ export default function Predictions({facts, user, group}) {
         away: 0,
         name: userName,
         group: group.id,
-        hometeam: facts.localTeam.data.name,
-        awayteam: facts.visitorTeam.data.name,
+        hometeam: facts && facts.localTeam.data.name,
+        awayteam: facts && facts.visitorTeam.data.name,
     })
 
     async function getPredictions() {
@@ -50,7 +50,7 @@ export default function Predictions({facts, user, group}) {
         <h2 className="">Predictions</h2>
         <form onSubmit={handleSubmit} className="pform">
             {/* <label>Home team:{facts && facts.localTeam.data.name}</label> */}
-            <input type='text' name='hometeam' value={facts && facts.localTeam.data.name} onChange={handleChange} readOnly/>
+            <input type='text' name='hometeam' value={facts && facts.localTeam.data.name} onChange={handleChange} className="pinput" readOnly/>
             <select className="select" name='home' value={form.home} onChange={handleChange}>
                 <option>0</option>
                 <option>1</option>
@@ -63,7 +63,7 @@ export default function Predictions({facts, user, group}) {
                 <option>8</option>
             </select>
             {/* <label>Away Team</label> */}
-            <input type='text' name='awayteam' value={facts && facts.visitorTeam.data.name} onChange={handleChange} readOnly/>
+            <input type='text' name='awayteam' value={facts && facts.visitorTeam.data.name} onChange={handleChange} className="pinput" readOnly/>
             <select className="select" name='away' value={form.away} onChange={handleChange}>
                 <option>0</option>
                 <option>1</option>
@@ -77,11 +77,11 @@ export default function Predictions({facts, user, group}) {
             </select>            
             <input type="text" name="name"  value={userName} hidden/>
             <input type="number" name="group" value={group.id} hidden/>
-            <button type="submit">Submit</button>
+            <button type="submit" className='pbutton'>Submit</button>
         </form>
         <hr className='predictionHr'></hr>
         <p>{error}</p>
-
+            <h4>--Place Prediction--</h4>
             {prediction.map((result) => (             
                 <Results result={result} f={facts && facts.group_id} facts={facts} />
             ))}
