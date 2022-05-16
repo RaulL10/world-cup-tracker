@@ -10,7 +10,6 @@ import './GroupDetail.css'
 export default function GroupDetail({data, user}) {
     let {groupName} = useParams()
     let group = data.data.groups.data.find((group) => group.name === groupName)
-    
     const [match, setMatch] = useState(null)
     const [loading, setLoading] = useState(true)
     const [error, setError] = useState(null)

@@ -85,7 +85,6 @@ export default function Predictions({facts, user, group}) {
             {prediction.map((result) => (             
                 <Results result={result} f={facts && facts.group_id} facts={facts} />
             ))}
-       
         </div>
     )
 }
