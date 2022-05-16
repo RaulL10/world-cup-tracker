@@ -38,3 +38,20 @@ h1 {
     border-style: none;
     font-size: 18px;
 }
+@media only screen and (max-width: 800px) {
+    .pform {
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+        align-items: center;
+    }
+    .select {
+        width: 25%;
+    }
+    .pbutton {
+        margin-top: 10px;
+    }
+    .pinput {
+        margin-bottom: 10px;
+    }
+}

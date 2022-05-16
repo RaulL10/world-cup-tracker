@@ -22,3 +22,9 @@
 .listmatch:hover {
     transform: translateY(4px) translateX(4px);
 }
+@media only screen and (max-width: 800px) {
+    .listmatch {
+        font-size: 15px;
+        max-width: 100%;
+    }
+}

@@ -17,7 +17,7 @@ export default function AuthPage({setUser}) {
     return (
         <main>
             <div className="banner">
-                <h1>COPA MUNDIAL <br></br>2022</h1>
+                <h1 className="title">COPA MUNDIAL 2022</h1>
             </div>
                 {
                     currentForm === 'login' ?

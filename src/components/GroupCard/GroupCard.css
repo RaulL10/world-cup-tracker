@@ -17,7 +17,6 @@ ul {
     border-color: rgb(120, 16, 38);
     border-radius: 10px;
     margin-bottom: 10px;
-    /* box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); */
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transition: transform 200ms, box-shadow 200ms;
 }

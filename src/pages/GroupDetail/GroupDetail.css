@@ -19,6 +19,7 @@
     margin: 0 auto;
     transform: translateY(4px) translateX(4px);
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    opacity: 90%;
 }
 h1 {
     font-family: 'Macondo', cursive;
@@ -29,10 +30,38 @@ h1 {
     width: 80%;
     height: 90%;
     margin: 0 auto;
+    opacity: 90%;
 }
 h2 {
     margin-top: 0px;
 }
 .sectionThree {
     margin-top: 10px;
+    opacity: 90%;
+}
+@media only screen and (max-width: 800px) {
+    h1 {
+        font-size: 30px;
+    }
+    .groupDetailsPage {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-areas: 
+        'sec1'
+        'sec2'
+        'aside';
+    }
+    .matches {
+        margin: 0 auto;
+    }
+    .sectionTwo {
+        width: 95%;
+        margin: 0 auto;
+    }
+    .sectionThree {
+        width: 90%;
+        margin: auto;
+        margin-top: 20px;
+    }
 }
